@@ -1,0 +1,129 @@
+.cardDetailCatalogo {
+  position: absolute;
+  display: flex;
+  top: 80px;
+  background: rgba(255, 0, 0, 0);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding-left: 350px;
+  margin-top: 50px;
+}
+.cardDetailCatalogo .cardBoxConten {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 5px;
+  height: 77vh;
+  border: 1px solid #fff;
+  background: rgba(26, 1, 1, 0.062);
+  border-radius: 20px;
+  padding: 20px;
+  position: relative;
+  top: 2%;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+.boxButtonPage {
+  /* position: absolute;
+  display: flex;
+  left: 30px;
+  top: 30px;
+  width: 300px;
+  height: 420px;
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px); */
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: 5px;
+  width: 1600px;
+  top: 900px;
+  height: 50px;
+  background: rgba(224, 222, 222, 0);
+}
+#PaginaActual {
+  height: 40px;
+  width: 40px;
+  margin: 10px;
+  border-radius: 50%;
+  background: #f0087c86;
+}
+#PaginaActual:hover {
+  background: #ffc107;
+  color: #fff;
+}
+
+.boxButtonFilter {
+  background: rgba(224, 217, 217, 0.027);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  grid-row-gap: 20px;
+  position: absolute;
+  width: 200px;
+  height: 300px;
+  right: 85%;
+  top: 70px;
+  left: 53px;
+}
+.bottonFiltro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border-radius: 30px;
+  font-size: 20px;
+  background: #ffc107;
+  color: #fff;
+}
+
+.filterSelect {
+  width: 100%;
+  border-radius: 30px;
+  font-size: 20px;
+  background: #ff5722;
+  color: #000;
+}
+#continentes {
+  width: 200px;
+  height: 50px;
+  position: absolute;
+  display: flex;
+  left: 50px;
+  top: 400px;
+  font-size: 20px;
+  border-radius: 30px;
+  padding-left: 20px;
+}
+#continentes #opcContienente {
+  background: #ff5722;
+
+  width: 50px;
+}
+#temporadaC {
+  width: 200px;
+  height: 50px;
+  position: absolute;
+  display: flex;
+  left: 50px;
+  top: 480px;
+  font-size: 20px;
+  border-radius: 30px;
+  padding-left: 20px;
+}
+#opcTemporada {
+  background: #ff5722;
+
+  width: 50px;
+}

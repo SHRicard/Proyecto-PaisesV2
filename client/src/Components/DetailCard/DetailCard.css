@@ -1,0 +1,321 @@
+.boxBat {
+  width: 100%;
+  height: 100vh;
+  background: rgb(0, 0, 0);
+  background-image: url("./Fondo1.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.boxCardsDetalle {
+  position: absolute;
+  left: 250px;
+  top: 160px;
+  display: flex;
+  width: 82%;
+  height: 82%;
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+}
+.boxImgDetail {
+  position: absolute;
+  display: flex;
+  top: 40px;
+  left: -200px;
+  backdrop-filter: blur(10px);
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.1);
+  width: 400px;
+  height: 400px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+.boxImgDetail img {
+  width: 370px;
+  height: 370px;
+  border-radius: 5px;
+}
+.boxNameDetalle {
+  position: absolute;
+  display: flex;
+  left: 220px;
+  top: 100px;
+  color: #fff;
+  font-size: 2em;
+  letter-spacing: 5px;
+}
+.boxIdDetalle {
+  position: absolute;
+  display: flex;
+  left: 40%;
+  top: -20%;
+  font-size: 8em;
+  color: rgba(255, 255, 255, 0.315);
+  letter-spacing: 5px;
+}
+.boxAllData {
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+
+  position: absolute;
+  display: flex;
+
+  width: 600px;
+  height: 500px;
+  background: rgba(219, 208, 208, 0.274);
+  backdrop-filter: blur(5px);
+
+  left: 1150px;
+  border-radius: 30px;
+  top: -30px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.boxContinenete {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background: #2a2b2f;
+  border-radius: 30px;
+  width: 150px;
+  font-size: 25px;
+  left: 30px;
+}
+#idContinente {
+  color: #fff;
+  position: absolute;
+  font-size: 25px;
+  top: 20px;
+  left: 30px;
+}
+
+.boxCapital {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background: #2a2b2f;
+  border-radius: 30px;
+  width: 150px;
+  font-size: 25px;
+  left: 350px;
+}
+
+#IdCapital {
+  color: #fff;
+  position: absolute;
+  font-size: 25px;
+  top: 20px;
+  left: 350px;
+}
+
+.boxRegion {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background: #2a2b2f;
+  border-radius: 30px;
+  width: 150px;
+  font-size: 25px;
+  top: 150px;
+  left: 30px;
+}
+#idSubRegion {
+  color: #fff;
+  position: absolute;
+  font-size: 25px;
+  top: 200px;
+  left: 30px;
+}
+.boxArea {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background: #2a2b2f;
+  border-radius: 30px;
+  width: 150px;
+  font-size: 25px;
+  top: 150px;
+  left: 350px;
+}
+#idArea {
+  color: #fff;
+  position: absolute;
+  font-size: 25px;
+  top: 200px;
+  left: 350px;
+}
+.boxPopulation {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background: #2a2b2f;
+  border-radius: 30px;
+  width: 150px;
+  font-size: 25px;
+  top: 300px;
+  left: 30px;
+}
+
+#idPoblacion {
+  color: #fff;
+  position: absolute;
+  font-size: 25px;
+  top: 350px;
+  left: 30px;
+}
+.boxCurrencies {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background: #2a2b2f;
+  border-radius: 30px;
+  width: 150px;
+  font-size: 25px;
+  top: 300px;
+  left: 350px;
+}
+#idPeso {
+  color: #fff;
+  position: absolute;
+  font-size: 25px;
+  top: 350px;
+  left: 350px;
+}
+.boxPopulation {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background: #2a2b2f;
+  border-radius: 30px;
+  width: 150px;
+}
+
+/* .boxAllData p {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: -50%;
+  top: -73px;
+  margin-top: 80px;
+  color: rgb(0, 252, 210);
+  font-size: 19px;
+} */
+
+.languages {
+  position: absolute;
+  display: flex;
+  width: 200px;
+  height: 50px;
+  left: 230px;
+  border-radius: 30px;
+  top: 200px;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background: #2a2b2f;
+}
+#idLanguages {
+  background: #2a2b2f;
+  color: #fff;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 270px;
+  margin: 10px;
+  left: 240px;
+  height: 40px;
+  width: 150px;
+  border-radius: 30px;
+}
+
+.timeZones {
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  width: 200px;
+  height: 200px;
+  font-size: 1em;
+  color: #fff;
+  position: absolute;
+  display: flex;
+  left: 500px;
+  top: 280px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  align-items: center;
+  justify-content: center;
+}
+#idTimeZone {
+  position: absolute;
+  top: 30px;
+}
+
+.turismo {
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 670px;
+  left: 140px;
+  color: #fff;
+  width: 1750px;
+  height: 370px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+}
+.buttonAtras {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 500px;
+  top: 200px;
+  border-radius: 100px;
+  backdrop-filter: blur(5px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.425);
+  width: 100px;
+  height: 50px;
+  font-size: 25px;
+  font-weight: 900;
+  color: #fff;
+}
+.atrasButton {
+  text-decoration: none;
+}
+
+.buttonAtras:hover {
+  background: #ffc107;
+  color: #000;
+}

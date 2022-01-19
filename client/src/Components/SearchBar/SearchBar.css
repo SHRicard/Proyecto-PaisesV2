@@ -1,0 +1,47 @@
+.SearchBox {
+  position: absolute;
+
+  top: 84px;
+  left: 750px;
+  width: 500px;
+  /* height: 80px; */
+  transform: translate(-50%, -50%);
+}
+input {
+  position: relative;
+  display: inline-block;
+  font-size: 20px;
+  box-sizing: border-box;
+
+  transition: 0.5s;
+}
+.textSarchBox {
+  background: rgba(255, 255, 255, 0.363);
+
+  width: 340px;
+  height: 50px;
+  border: none;
+  outline: none;
+  padding: 0 25px;
+  border-radius: 25px 0 0 25px;
+  font-weight: 900;
+}
+.SearchBox2 {
+  font-weight: 900;
+  left: -5px;
+  top: -1px;
+  position: relative;
+  border-radius: 0 25px 25px 0;
+  width: 150px;
+  height: 50px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: #ffc107;
+  color: #fff;
+}
+.SearchBox2:hover {
+  background: #ff5722;
+
+  color: #000;
+}

@@ -1,0 +1,61 @@
+.boxSinturismo {
+  background-image: url("./sinTurismo.jpg");
+  background-size: cover;
+  background-position: center;
+  /* background-attachment: fixed; */
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 25px;
+  border-radius: 30px;
+  top: 10px;
+  width: 1700px;
+  height: 350px;
+}
+.sinTurismo {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 10px;
+  letter-spacing: 2px;
+  font-size: 3em;
+  font-weight: 1000;
+  color: #866911;
+}
+
+#idh2Error22 {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 500px;
+  top: 100px;
+  letter-spacing: 2px;
+  font-weight: 1000;
+  color: #080703;
+}
+.btnFormulario {
+  position: absolute;
+  position: relative;
+  display: inline-block;
+  padding: 8px 20px;
+  margin-top: 15px;
+  background: #fff;
+  color: rgb(0, 0, 0);
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: bold;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  top: 50px;
+}
+.btnFormulario:hover {
+  background: #ffc107;
+  color: #fff;
+}

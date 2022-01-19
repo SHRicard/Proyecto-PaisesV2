@@ -1,0 +1,59 @@
+.boxAddFavorito {
+  background-image: url("../Home/fondo.jpg");
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  font-family: sans-serif;
+  display: flex;
+}
+.navarFavorito {
+  position: absolute;
+  width: 100%;
+}
+.boxFavorito {
+  background: rgba(136, 132, 132, 0.486);
+  position: relative;
+  left: 200px;
+  top: 190px;
+  width: 80%;
+  height: 80%;
+  border: 1px solid #fff;
+  border-radius: 15px;
+}
+
+.titleFavorito {
+  position: relative;
+  border: 1px solid #fff;
+  border-radius: 40px;
+  width: 600px;
+  height: 80px;
+  background: #ffc107;
+  color: #fff;
+  letter-spacing: 2px;
+  font-size: 4em;
+  text-transform: uppercase;
+  font-weight: 1000;
+  left: 500px;
+  bottom: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cardFavoritos {
+  position: relative;
+  display: flex;
+  left: 60px;
+  bottom: 115px;
+  width: 93%;
+  height: 90%;
+  background: rgba(182, 163, 163, 0.411);
+  /* border: 1px solid #fff; */
+  border-radius: 20px;
+  box-shadow: inset 10px 10px 50px rgba(10, 167, 146, 0.589);
+}
+.cardFavoritos:hover {
+  box-shadow: inset 10px 10px 50px rgba(221, 200, 9, 0.589);
+  background: rgba(0, 0, 0, 0.664);
+}

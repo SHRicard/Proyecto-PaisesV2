@@ -1,0 +1,90 @@
+.boxCardTurismo {
+  position: relative;
+  background: rgba(236, 12, 12, 0);
+  width: 340px;
+  height: 370px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.boxCardTurismo .boxTurismo {
+  min-width: 300px;
+  height: 340px;
+  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
+    inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 5px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  margin: 30px;
+}
+.boxCardTurismo .boxTurismo .boxTurismoCard {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  right: 30px;
+  bottom: 30px;
+  background: #2a2b2f;
+  border: 2px solid #1e1f23;
+  border-radius: 15px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  transition: 0.5s;
+}
+/* .boxCardTurismo .boxTurismo .boxTurismoCard:hover {
+  transform: translateY(-25px);
+} */
+
+.boxCardTurismo .boxTurismo .boxTurismoCard .contentTurismo {
+  padding: 20px;
+  text-align: center;
+}
+.boxCardTurismo .boxTurismo .boxTurismoCard .contentTurismo h2 {
+  /* position: absolute; */
+  /* top: -10px; */
+  right: 30px;
+  color: rgb(255, 255, 255, 0.5);
+  position: absolute;
+  top: 15px;
+}
+.boxCardTurismo .boxTurismo .boxTurismoCard .contentTurismo h3 {
+  /* top: -10px; */
+  right: 30px;
+  color: rgb(255, 255, 255, 0.5);
+  position: relative;
+  left: 5px;
+  top: 80px;
+  margin: 10px;
+}
+.boxCardTurismo .boxTurismo .boxTurismoCard .contentTurismo h4 {
+  position: relative;
+  top: 130px;
+  color: rgb(255, 255, 255, 0.5);
+}
+
+.boxCardTurismo .boxTurismo .boxTurismoCard .contentTurismo h5 {
+  font-size: 12px;
+  position: relative;
+  top: 110px;
+  color: rgba(11, 125, 153, 0.815);
+}
+#borrarTurismo {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(116, 109, 109, 0.548);
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  left: 245px;
+  top: 10px;
+}
+#borrarTurismo:hover {
+  background: red;
+}
+
+#ActualizarTurismo {
+  position: absolute;
+  top: 250px;
+  left: 100px;
+  background: #ffc107;
+  width: 130px;
+}
