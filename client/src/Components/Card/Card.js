@@ -12,6 +12,9 @@ const Card = ({ props }) => {
   const addRemoveFavorite = (id) => {
     dispatch(addFavorito({ id, addRemove: !isFavorite }));
     setIsFavorite(!isFavorite);
+    if (props.refresh === true || props.refresh === false) {
+      props.setRefresh(!props.refresh);
+    }
   };
 
   return (

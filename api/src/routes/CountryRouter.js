@@ -101,34 +101,82 @@ router.get("/search", async (req, res, next) => {
       subRegion = req.query.subRegion;
     } else subRegion = null;
 
+    let temporada;
+    if (req.query.temporada) {
+      temporada = req.query.temporada;
+    } else temporada = null;
+
     //busco en mi base de dato por  nombre con un findAndCountAll donde solo le pongo la coincidencia al final
     let search;
 
-    if (subRegion) {
-      search = await Country.findAndCountAll({
-        where: {
-          name: {
-            [Op.iLike]: name + "%",
+    if (temporada) {
+      if (subRegion) {
+        search = await Country.findAndCountAll({
+          where: {
+            name: {
+              [Op.iLike]: name + "%",
+            },
+            subregion: subRegion,
           },
-          subregion: subRegion,
-        },
-
-        order: orden,
-        offset: pagina * 10,
-        limit: 10,
-      });
-    } else
-      search = await Country.findAndCountAll({
-        where: {
-          name: {
-            [Op.iLike]: name + "%",
+          include: [
+            {
+              model: Tourism,
+              where: {
+                season: temporada,
+              },
+            },
+          ],
+          order: orden,
+          offset: pagina * 10,
+          limit: 10,
+        });
+      } else
+        search = await Country.findAndCountAll({
+          where: {
+            name: {
+              [Op.iLike]: name + "%",
+            },
           },
-        },
+          include: [
+            {
+              model: Tourism,
+              where: {
+                season: temporada,
+              },
+            },
+          ],
+          order: orden,
+          offset: pagina * 10,
+          limit: 10,
+        });
+    }
+    if (!temporada) {
+      if (subRegion) {
+        search = await Country.findAndCountAll({
+          where: {
+            name: {
+              [Op.iLike]: name + "%",
+            },
+            subregion: subRegion,
+          },
 
-        order: orden,
-        offset: pagina * 10,
-        limit: 10,
-      });
+          order: orden,
+          offset: pagina * 10,
+          limit: 10,
+        });
+      } else
+        search = await Country.findAndCountAll({
+          where: {
+            name: {
+              [Op.iLike]: name + "%",
+            },
+          },
+
+          order: orden,
+          offset: pagina * 10,
+          limit: 10,
+        });
+    }
 
     res.status(201).send(search);
   } catch (err) {
@@ -155,23 +203,63 @@ router.get("/", async (req, res, next) => {
       subRegion = req.query.subRegion;
     } else subRegion = null;
 
+    let temporada;
+    if (req.query.temporada) {
+      temporada = req.query.temporada;
+    } else temporada = null;
+
     let search;
 
-    if (subRegion) {
-      search = await Country.findAndCountAll({
-        where: {
-          subregion: subRegion,
-        },
-        order: orden,
-        offset: pagina * 10,
-        limit: 10,
-      });
-    } else
-      search = await Country.findAndCountAll({
-        order: orden,
-        offset: pagina * 10,
-        limit: 10,
-      });
+    if (temporada) {
+      if (subRegion) {
+        search = await Country.findAndCountAll({
+          where: {
+            subregion: subRegion,
+          },
+          include: [
+            {
+              model: Tourism,
+              where: {
+                season: temporada,
+              },
+            },
+          ],
+          order: orden,
+          offset: pagina * 10,
+          limit: 10,
+        });
+      } else
+        search = await Country.findAndCountAll({
+          include: [
+            {
+              model: Tourism,
+              where: {
+                season: temporada,
+              },
+            },
+          ],
+          order: orden,
+          offset: pagina * 10,
+          limit: 10,
+        });
+    }
+    if (!temporada) {
+      if (subRegion) {
+        search = await Country.findAndCountAll({
+          where: {
+            subregion: subRegion,
+          },
+          order: orden,
+          offset: pagina * 10,
+          limit: 10,
+        });
+      } else
+        search = await Country.findAndCountAll({
+          order: orden,
+          offset: pagina * 10,
+          limit: 10,
+        });
+    }
 
     res.status(201).send(search);
   } catch (err) {

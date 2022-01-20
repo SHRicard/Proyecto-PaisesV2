@@ -17,7 +17,7 @@ const NavBar = () => {
       <img className="bandera" src={bandera} alt="no img" />
       <ul>
         <li>
-          <Link to="/home">Home</Link>
+          <Link to="/home/">Home</Link>
         </li>
         <li>
           <Link to="/home/Favoritos">Favoritos</Link>

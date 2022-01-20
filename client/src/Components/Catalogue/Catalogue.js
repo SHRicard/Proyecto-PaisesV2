@@ -36,13 +36,6 @@ const subRegiones = [
 ];
 
 const Catalogue = () => {
-  const [query, setQuery] = useState({
-    pagina: 1,
-    order: null,
-    tipoOrder: null,
-    continente: null,
-    tipoDeTurismo: null,
-  });
   const [paginado, setPaginado] = useState([1]);
   const [orden, setOrden] = useState(null);
   const [tipoDeOrden, setTipoDeOrden] = useState(null);
@@ -62,28 +55,26 @@ const Catalogue = () => {
 
   useEffect(() => {
     dispatch(cambioDePagina(1));
-    setQuery({
-      pagina: 1,
-      order: null,
-      tipoOrder: null,
-      continente: null,
-      tipoDeTurismo: null,
-    });
-  }, [dispatch, parametroDeBusqueda, orden, tipoDeOrden, subRegion]);
+  }, [dispatch, parametroDeBusqueda, orden, tipoDeOrden, subRegion, temporada]);
 
   useEffect(() => {
     setOrden(null);
     setTipoDeOrden(null);
-    setSubRegion(null);
-  }, [parametroDeBusqueda]);
+    setSubRegion("");
+    setTemporada("");
+    dispatch(cambioDePagina(1));
+  }, [parametroDeBusqueda, dispatch]);
 
   useEffect(() => {
-    let paramsSearch = `pagina=${query.pagina}`;
-    if (orden && tipoDeOrden) {
+    let paramsSearch = `pagina=${paginaActual}`;
+    if (!!orden && !!tipoDeOrden) {
       paramsSearch += `&orden=${orden}&tipoDeOrden=${tipoDeOrden}`;
     }
     if (!!subRegion) {
       paramsSearch += `&subRegion=${subRegion}`;
+    }
+    if (!!temporada) {
+      paramsSearch += `&temporada=${temporada}`;
     }
     if (!!parametroDeBusqueda) {
       dispatch(searchCountry(`${parametroDeBusqueda}&${paramsSearch}`));
@@ -92,38 +83,23 @@ const Catalogue = () => {
     }
   }, [
     dispatch,
-    query.pagina,
     parametroDeBusqueda,
     orden,
     tipoDeOrden,
     subRegion,
+    temporada,
+    paginaActual,
   ]);
 
-  // useEffect(() => {
-
-  //   if (numeroDePagina > 20) {
-  //     dispatch(
-  //       getAllCountries(
-  //         `?pagina=${query.pagina}&order=${query.order}&tipoOrder=${query.tipoOrder}&continente=${query.continente}&tipoDeTurismo=${query.tipoDeTurismo}`
-  //       )
-  //     );
-  //   } else {
-  //     dispatch(
-  //       searchCountry(
-  //         `${parametroDeBusqueda}&pagina=${query.pagina}&order=${query.order}&tipoOrder=${query.tipoOrder}&continente=${query.continente}&tipoDeTurismo=${query.tipoDeTurismo}}`
-  //       )
-  //     );
-  //   }
-  // }, [dispatch, numeroDePagina, paginaActual, query]);
-
   const changePage = (pagina) => {
-    setQuery((prevState) => {
-      return {
-        ...prevState,
-        pagina,
-      };
-    });
-    dispatch(cambioDePagina(pagina - 1));
+    dispatch(cambioDePagina(pagina));
+  };
+
+  const resetFiltros = () => {
+    setOrden(null);
+    setTipoDeOrden(null);
+    setSubRegion("");
+    setTemporada("");
   };
 
   return (
@@ -145,7 +121,7 @@ const Catalogue = () => {
               id="PaginaActual"
               onClick={() => changePage(page)}
               style={{
-                color: ` ${page === paginaActual + 1 ? "#fff" : "#000"}`,
+                color: ` ${page === paginaActual ? "#fff" : "#000"}`,
               }}
             >
               {page}
@@ -154,6 +130,9 @@ const Catalogue = () => {
         })}
       </div>
       <div className="boxButtonFilter">
+        <button onClick={() => resetFiltros()} className="bottonFiltro">
+          reset filtros
+        </button>
         <button
           onClick={() => setOrden("asc")}
           className={`${orden === "asc" ? "filterSelect" : "bottonFiltro"}`}
@@ -190,7 +169,7 @@ const Catalogue = () => {
         value={subRegion}
         onChange={(e) => setSubRegion(e.target.value)}
       >
-        <option value={null}></option>
+        <option id="opcContienente" value=""></option>
         {subRegiones.map((subRegion) => {
           return (
             <option id="opcContienente" value={subRegion}>

@@ -19,7 +19,7 @@
   border-radius: 6px;
   box-shadow: 0 5px 35px rgba(255, 255, 255, 0.8);
   filter: hue-rotate(120deg);
-  animation: animateColor 10s linear infinite;
+  animation: animateColor 5s linear infinite;
 }
 @keyframes animateColor {
   0% {
@@ -47,11 +47,7 @@
     rgba(255, 255, 255, 0.3) 100%
   );
 }
-/* .inputBox {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(5, 1fr);
-} */
+
 .inputBox h2 {
   position: inherit;
   color: #fff;
@@ -89,7 +85,7 @@
 .cajon {
   width: 100%;
   height: 99vh;
-  background-image: url("./Fondo2.jpg");
+  background-image: url("./fondoFomulario2.jpg");
   background-size: cover;
 }
 

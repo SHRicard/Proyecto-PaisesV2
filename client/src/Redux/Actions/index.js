@@ -16,7 +16,7 @@ export function getAllCountries(props) {
     );
 
     return dispatch({
-      type: "GET_COUNTRIES",
+      type: GET_COUNTRIES,
       payload: JsonCountries.data,
     });
   };

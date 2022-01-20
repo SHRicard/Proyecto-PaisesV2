@@ -31,7 +31,7 @@
 .boxNar ul li a {
   text-decoration: none;
   font-weight: 900;
-  color: #fff;
+  color: rgb(136, 7, 7);
   padding: 15px 30px;
   border-radius: 25px;
 }
