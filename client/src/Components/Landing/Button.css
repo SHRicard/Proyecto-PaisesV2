@@ -1,0 +1,110 @@
+.buttonGoHome {
+  position: relative;
+  width: 280px;
+  height: 70px;
+  line-height: 60px;
+  background-color: rgb(2, 0, 0);
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 40px;
+  letter-spacing: 4px;
+  -webkit-box-reflect: below 10px linear-gradient(transparent, #0004);
+}
+
+.buttonGoHome::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    45deg,
+    #fb0094,
+    #00f,
+    #0f0,
+    #ff0,
+    #f00,
+    #fb0094,
+    #00f,
+    #0f0,
+    #ff0,
+    #f00
+  );
+  background-size: 400%;
+  opacity: 0;
+  transition: 0.5s;
+  animation: buttonAnimate 20s linear infinite;
+}
+.buttonGoHome:hover::before,
+.buttonGoHome:hover::after {
+  opacity: 1;
+}
+
+@keyframes buttonAnimate {
+  0% {
+    background-position: 0 0;
+  }
+
+  50% {
+    background-position: 300% 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.buttonGoHome::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    45deg,
+    #fb0094,
+    #00f,
+    #0f0,
+    #ff0,
+    #f00,
+    #fb0094,
+    #00f,
+    #0f0,
+    #ff0,
+    #f00
+  );
+  background-size: 400%;
+  opacity: 0;
+  filter: blur(30px);
+  transition: 0.5s;
+  animation: buttonAnimate 20s linear infinite;
+}
+
+.buttonGoHome .spanBoxButton {
+  position: absolute;
+  display: block;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  text-align: center;
+  background: #0c0c0c;
+  color: rgba(255, 255, 255, 0.2);
+  transition: 0.5s;
+  z-index: 1;
+}
+
+.buttonGoHome:hover .spanBoxButton {
+  color: rgba(255, 255, 255, 1);
+}
+.buttonGoHome .spanBoxButton::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: rgba(255, 255, 255, 0.1);
+}
